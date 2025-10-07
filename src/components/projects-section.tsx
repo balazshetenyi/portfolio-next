@@ -24,21 +24,21 @@ export function ProjectsSection() {
       featured: true,
     },
     {
+      title: "Hétenyi-Bau Construction Website",
+      description:
+        "A fully responsive company website designed and developed for a local construction business, Hétenyi-Bau. The site presents the company's services, portfolio, and contact information in a modern, mobile-friendly layout. I built the entire site architecture, implemented SEO-optimised metadata, and ensured high Lighthouse performance scores. This project highlights my ability to deliver polished production-ready websites for real clients.",
+      techStack: ["Next.js", "Tailwind CSS", "React", "TypeScript"],
+      githubUrl: null,
+      liveUrl: "https://www.hetenyi-bau.hu/",
+      featured: false,
+    },
+    {
       title: "Transfer Learning Investigation",
       description:
         "Machine learning research project investigating transfer learning techniques for image classification. Achieved 95% accuracy improvement over baseline models.",
       techStack: ["Python", "TensorFlow", "Jupyter", "Scikit-learn", "Pandas"],
       githubUrl: "https://github.com/balazs/transfer-learning",
       liveUrl: null,
-      featured: false,
-    },
-    {
-      title: "Kung Fu Workout Tracker",
-      description:
-        "Personal fitness tracking application with custom workout routines, progress analytics, and goal setting for martial arts training.",
-      techStack: ["React", "Express.js", "MongoDB", "Chart.js"],
-      githubUrl: "https://github.com/balazs/kungfu-tracker",
-      liveUrl: "https://kungfu-tracker.netlify.app",
       featured: false,
     },
   ];
@@ -120,15 +120,17 @@ export function ProjectsSection() {
                 </div>
 
                 <div className="flex space-x-4">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                  >
-                    <Github className="mr-2 h-4 w-4" />
-                    Code
-                  </a>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    >
+                      <Github className="mr-2 h-4 w-4" />
+                      Code
+                    </a>
+                  )}
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
@@ -137,7 +139,7 @@ export function ProjectsSection() {
                       className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
+                      Visit Live Site
                     </a>
                   )}
                 </div>
