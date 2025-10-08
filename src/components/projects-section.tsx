@@ -10,8 +10,8 @@ export function ProjectsSection() {
       description:
         "A React Native mobile application with real-time notifications and community engagement features. Built with modern mobile development practices and seamless user experience.",
       techStack: ["React Native", "Supabase", "TypeScript", "Expo"],
-      githubUrl: "https://github.com/balazs/community-board",
-      liveUrl: "https://community-board.app",
+      githubUrl: null,
+      liveUrl: null,
       featured: true,
     },
     {
@@ -19,8 +19,8 @@ export function ProjectsSection() {
       description:
         "Full-stack web application for property management with automated workflows, tenant communication, and financial tracking. Streamlines property operations for landlords.",
       techStack: ["React", "Node.js", "PostgreSQL", "AWS", "Docker"],
-      githubUrl: "https://github.com/balazs/smartlet",
-      liveUrl: "https://smartlet-demo.com",
+      githubUrl: null,
+      liveUrl: null,
       featured: true,
     },
     {
@@ -37,7 +37,7 @@ export function ProjectsSection() {
       description:
         "Machine learning research project investigating transfer learning techniques for image classification. Achieved 95% accuracy improvement over baseline models.",
       techStack: ["Python", "TensorFlow", "Jupyter", "Scikit-learn", "Pandas"],
-      githubUrl: "https://github.com/balazs/transfer-learning",
+      githubUrl: null,
       liveUrl: null,
       featured: false,
     },
@@ -130,6 +130,12 @@ export function ProjectsSection() {
                       <Github className="mr-2 h-4 w-4" />
                       Code
                     </a>
+                  )}
+                  {!project.githubUrl && (
+                    <span className="inline-flex items-center text-gray-500 dark:text-gray-500">
+                      <Github className="mr-2 h-4 w-4" />
+                      Code available upon request
+                    </span>
                   )}
                   {project.liveUrl && (
                     <a

@@ -1,31 +1,111 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: white;
+  color: #171717;
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Custom scrollbar for webkit browsers */
+.dark body {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}
+
+/* Explicit dark mode overrides for all components */
+.dark .bg-white {
+  background-color: #0a0a0a !important;
+}
+.dark .bg-gray-50 {
+  background-color: #1f2937 !important;
+}
+.dark .bg-gray-100 {
+  background-color: #374151 !important;
+}
+.dark .bg-gray-800 {
+  background-color: #1f2937 !important;
+}
+.dark .bg-gray-900 {
+  background-color: #0a0a0a !important;
+}
+.dark .bg-white\/80 {
+  background-color: rgba(31, 41, 55, 0.8) !important;
+}
+.dark .bg-gray-900\/80 {
+  background-color: rgba(10, 10, 10, 0.8) !important;
+}
+
+.dark .text-gray-900 {
+  color: #ffffff !important;
+}
+.dark .text-gray-600 {
+  color: #d1d5db !important;
+}
+.dark .text-gray-300 {
+  color: #d1d5db !important;
+}
+.dark .text-gray-400 {
+  color: #9ca3af !important;
+}
+.dark .text-white {
+  color: #ffffff !important;
+}
+
+.dark .border-gray-200 {
+  border-color: #374151 !important;
+}
+.dark .border-gray-700 {
+  border-color: #4b5563 !important;
+}
+.dark .border-gray-300 {
+  border-color: #4b5563 !important;
+}
+.dark .border-gray-600 {
+  border-color: #4b5563 !important;
+}
+
+.dark .hover\:bg-gray-50:hover {
+  background-color: #374151 !important;
+}
+.dark .hover\:bg-gray-700:hover {
+  background-color: #374151 !important;
+}
+.dark .hover\:bg-gray-800:hover {
+  background-color: #1f2937 !important;
+}
+
+.dark .hover\:text-gray-900:hover {
+  color: #ffffff !important;
+}
+.dark .hover\:text-gray-100:hover {
+  color: #f3f4f6 !important;
+}
+.dark .hover\:text-white:hover {
+  color: #ffffff !important;
+}
+
+.dark .hover\:border-gray-400:hover {
+  border-color: #6b7280 !important;
+}
+.dark .hover\:border-gray-500:hover {
+  border-color: #6b7280 !important;
+}
+
+/* Gradient backgrounds */
+.dark .from-white {
+  --tw-gradient-from: #0a0a0a !important;
+}
+.dark .to-gray-50 {
+  --tw-gradient-to: #1f2937 !important;
+}
+.dark .from-gray-900 {
+  --tw-gradient-from: #0a0a0a !important;
+}
+.dark .to-gray-800 {
+  --tw-gradient-to: #1f2937 !important;
+}
+
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -55,14 +135,13 @@ body {
   background: #9ca3af;
 }
 
-/* Smooth focus transitions */
+/* Focus and selection */
 input:focus,
 textarea:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
 }
 
-/* Custom selection colors */
 ::selection {
   background-color: rgba(59, 130, 246, 0.2);
 }
