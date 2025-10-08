@@ -1,28 +1,10 @@
 "use client";
 
+import { education } from "@/constants/education";
 import { motion } from "framer-motion";
 import { GraduationCap, Calendar } from "lucide-react";
 
 export function EducationSection() {
-  const education = [
-    {
-      degree: "BSc (Honours) Computing & IT (Software Engineering)",
-      institution: "The Open University",
-      period: "Expected 2025",
-      description:
-        "Comprehensive study of software engineering principles, algorithms, data structures, machine laerning (ML), and modern development practices.",
-      status: "In Progress",
-    },
-    {
-      degree: "Foundation Degree in Software Development",
-      institution: "OpenClassrooms International",
-      period: "Completed 2021",
-      description:
-        "Intensive program covering full-stack development, project management, and industry best practices.",
-      status: "Completed",
-    },
-  ];
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
