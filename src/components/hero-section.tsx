@@ -62,7 +62,7 @@ export function HeroSection() {
 
             <a
               href="#contact"
-              className="inline-flex items-center px-8 py-3 border-2 border-blue-300 dark:border-blue-400 text-blue-700 dark:text-blue-300 hover:border-blue-500 dark:hover:border-blue-300 hover:text-blue-800 dark:hover:text-blue-200 font-medium rounded-lg transition-colors duration-200 hover:bg-blue-50 dark:hover:bg-blue-900/30"
+              className="inline-flex items-center px-8 py-3 border-2 border-gray-300 dark:border-gray-200 text-gray-500 dark:text-white hover:border-gray-500 dark:hover:border-white hover:text-gray-900 dark:hover:text-gray-100 font-medium rounded-lg transition-colors duration-200 hover:bg-gray-50 dark:hover:bg-gray-800"
             >
               <Mail className="mr-2 h-5 w-5" />
               Contact Me
