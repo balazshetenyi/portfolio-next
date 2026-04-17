@@ -12,7 +12,7 @@ export const experiences = [
       "Helping refine and extend the internal design system for consistent, accessible UIs.",
     ],
     stack:
-      "React, TypeScript, Next.js, Python, Django, Docker, AWS, OpenStack, GitLab",
+      "React, TypeScript, Next.js, Python, FastAPI, Django, ElasticSearch, Docker, AWS, OpenStack, GitLab",
   },
   {
     title: "Software Developer",

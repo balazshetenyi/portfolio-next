@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export function AboutSection() {
+  const lengthOfExperience = new Date().getFullYear() - 2021;
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,10 +23,10 @@ export function AboutSection() {
             <div className="space-y-6">
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                 I'm a Senior Software Developer at the Wellcome Sanger Institute
-                with over 4 years of experience building scalable, reliable
-                software solutions. My work spans from data-driven cloud systems
-                to intuitive user interfaces, always with a focus on creating
-                user-centred technology.
+                with over {lengthOfExperience} years of experience building
+                scalable, reliable software solutions. My work spans from
+                data-driven cloud systems to intuitive user interfaces, always
+                with a focus on creating user-centred technology.
               </p>
 
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">

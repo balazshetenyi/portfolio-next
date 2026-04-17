@@ -42,9 +42,7 @@ export function Footer() {
 
         <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-600 dark:text-gray-400 flex items-center justify-center">
-            © {currentYear} Balazs Hetenyi. Built with
-            <Heart className="h-4 w-4 mx-1 text-red-500" />
-            using Next.js & Tailwind CSS
+            © {currentYear} Balazs Hetenyi
           </p>
         </div>
       </div>
