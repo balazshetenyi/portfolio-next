@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export function AboutSection() {
-  const lengthOfExperience = new Date().getFullYear() - 2021;
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,7 +12,7 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
+          className="max-w-5xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             About Me
@@ -22,26 +21,32 @@ export function AboutSection() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                I'm a Senior Software Developer at the Wellcome Sanger Institute
-                with over {lengthOfExperience} years of experience building
-                scalable, reliable software solutions. My work spans from
-                data-driven cloud systems to intuitive user interfaces, always
-                with a focus on creating user-centred technology.
+                I&apos;m a Senior Software Developer at the Wellcome Sanger
+                Institute, where I build the software infrastructure that
+                supports world-leading genomics and cancer research. In practice
+                that means full-stack platforms in React and Python - document
+                management systems, Elasticsearch-powered search across
+                scientific literature, and secure data pipelines that help
+                researchers and clinical curators work with the COSMIC cancer
+                variant database.
               </p>
 
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                My expertise includes AWS cloud architecture, Python
-                development, full-stack web applications, and modern JavaScript
-                frameworks. I'm passionate about mentoring developers and
-                contributing to software engineering education, helping teams
-                grow and deliver exceptional products.
+                Outside of Sanger, I design and ship my own products. Recipify -
+                an AI-powered recipe generator - is live on the App Store and
+                Google Play. SmartLet is a full-stack rental marketplace
+                handling bookings, Stripe payments, and in-app messaging.
+                Building these end-to-end keeps me sharp across the full stack,
+                from React Native and serverless backends to real-world
+                deployment and monetisation.
               </p>
 
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community. I believe in writing clean,
-                maintainable code that solves real-world problems.
+                I also mentor developers at OpenClassrooms, guiding students
+                from first principles through to production-ready applications.
+                I care about writing software that solves real problems, is
+                maintainable by the next person, and holds up under real-world
+                conditions.
               </p>
             </div>
 
