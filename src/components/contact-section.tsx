@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Send, Loader2 } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import emailjs from "@emailjs/browser";
 
 export function ContactSection() {
@@ -100,7 +101,7 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   className="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
-                  <Github className="h-5 w-5 mr-3" />
+                  <GitHubIcon className="h-5 w-5 mr-3" />
                   GitHub Profile
                 </a>
 
@@ -110,7 +111,7 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   className="flex items-center text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
-                  <Linkedin className="h-5 w-5 mr-3" />
+                  <LinkedInIcon className="h-5 w-5 mr-3" />
                   LinkedIn Profile
                 </a>
               </div>

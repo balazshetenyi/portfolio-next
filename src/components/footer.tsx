@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,7 +14,7 @@ export function Footer() {
               Balazs Hetenyi
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Senior Software Developer
+              Software Engineer
             </p>
           </div>
 
@@ -26,7 +26,7 @@ export function Footer() {
               className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
               aria-label="GitHub"
             >
-              <Github className="h-6 w-6" />
+              <GitHubIcon className="h-6 w-6" />
             </a>
             <a
               href="https://www.linkedin.com/in/balazs-hetenyi-b45251173/"
@@ -35,7 +35,7 @@ export function Footer() {
               className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-6 w-6" />
+              <LinkedInIcon className="h-6 w-6" />
             </a>
           </div>
         </div>
