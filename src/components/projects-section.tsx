@@ -4,6 +4,22 @@ import { projects } from "@/constants/projects";
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 
+function AppleIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor">
+      <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.029 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701" />
+    </svg>
+  );
+}
+
+function GooglePlayIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor">
+      <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.234l2.302 1.33c.705.406.705 1.42 0 1.826L17.7 15.96l-2.54-2.54 2.538-2.947zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.635z" />
+    </svg>
+  );
+}
+
 export function ProjectsSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -51,7 +67,7 @@ export function ProjectsSection() {
               <motion.div
                 key={project.title}
                 variants={itemVariants}
-                className={`bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300 ${
+                className={`flex flex-col bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300 ${
                   project.featured ? "md:col-span-1" : ""
                 }`}
               >
@@ -70,6 +86,7 @@ export function ProjectsSection() {
                   {project.description}
                 </p>
 
+                <div className="mt-auto">
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.techStack.map((tech) => (
                     <span
@@ -110,6 +127,29 @@ export function ProjectsSection() {
                       Visit Live Site
                     </a>
                   )}
+                  {project.appStoreUrl && (
+                    <a
+                      href={project.appStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+                    >
+                      <AppleIcon className="mr-2 h-4 w-4" />
+                      App Store
+                    </a>
+                  )}
+                  {project.playStoreUrl && (
+                    <a
+                      href={project.playStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+                    >
+                      <GooglePlayIcon className="mr-2 h-4 w-4" />
+                      Google Play
+                    </a>
+                  )}
+                </div>
                 </div>
               </motion.div>
             ))}
