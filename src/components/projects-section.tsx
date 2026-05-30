@@ -57,14 +57,20 @@ export function ProjectsSection() {
                 }`}
               >
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white pr-4">
                     {project.title}
                   </h3>
-                  {project.featured && (
-                    <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded-full text-xs font-medium">
-                      Featured
-                    </span>
-                  )}
+                  <span
+                    className={`shrink-0 px-2 py-1 rounded-full text-xs font-medium ${
+                      project.type === "professional"
+                        ? "bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200"
+                        : "bg-violet-100 dark:bg-violet-900 text-violet-800 dark:text-violet-200"
+                    }`}
+                  >
+                    {project.type === "professional"
+                      ? "Professional"
+                      : "Side Project"}
+                  </span>
                 </div>
 
                 <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
@@ -72,69 +78,69 @@ export function ProjectsSection() {
                 </p>
 
                 <div className="mt-auto">
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
 
-                <div className="flex space-x-4">
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                    >
-                      <GitHubIcon className="mr-2 h-4 w-4" />
-                      Code
-                    </a>
-                  )}
-                  {/* {!project.githubUrl && (
+                  <div className="flex space-x-4">
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                      >
+                        <GitHubIcon className="mr-2 h-4 w-4" />
+                        Code
+                      </a>
+                    )}
+                    {/* {!project.githubUrl && (
                     <span className="inline-flex items-center text-gray-500 dark:text-gray-500">
                       <GitHubIcon className="mr-2 h-4 w-4" />
                       Code available upon request
                     </span>
                   )} */}
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
-                    >
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Visit Live Site
-                    </a>
-                  )}
-                  {project.appStoreUrl && (
-                    <a
-                      href={project.appStoreUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
-                    >
-                      <AppleIcon className="mr-2 h-4 w-4" />
-                      App Store
-                    </a>
-                  )}
-                  {project.playStoreUrl && (
-                    <a
-                      href={project.playStoreUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
-                    >
-                      <GooglePlayIcon className="mr-2 h-4 w-4" />
-                      Google Play
-                    </a>
-                  )}
-                </div>
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+                      >
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Visit Live Site
+                      </a>
+                    )}
+                    {project.appStoreUrl && (
+                      <a
+                        href={project.appStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+                      >
+                        <AppleIcon className="mr-2 h-4 w-4" />
+                        App Store
+                      </a>
+                    )}
+                    {project.playStoreUrl && (
+                      <a
+                        href={project.playStoreUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+                      >
+                        <GooglePlayIcon className="mr-2 h-4 w-4" />
+                        Google Play
+                      </a>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             ))}
