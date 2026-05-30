@@ -88,13 +88,4 @@ export const projects = [
     liveUrl: "https://www.hetenyi-bau.hu/",
     featured: false,
   },
-  {
-    title: "Transfer Learning Investigation",
-    description:
-      "Machine learning research project investigating transfer learning techniques for image classification. Achieved 95% accuracy improvement over baseline models.",
-    techStack: ["Python", "TensorFlow", "Jupyter", "Scikit-learn", "Pandas"],
-    githubUrl: null,
-    liveUrl: null,
-    featured: false,
-  },
 ];

@@ -4,13 +4,13 @@ export const education = [
     institution: "The Open University",
     period: "Completed 2025",
     description:
-      "Comprehensive study of software engineering principles, algorithms, data structures, machine laerning (ML), and modern development practices.",
+      "Comprehensive study of software engineering principles, algorithms, data structures, machine learning (ML), and modern development practices.",
     status: "Completed",
   },
   {
     degree: "Foundation Degree in Software Development",
     institution: "OpenClassrooms International",
-    period: "Completed 2021",
+    period: "Completed 2019",
     description:
       "Intensive program covering full-stack development, project management, and industry best practices.",
     status: "Completed",
