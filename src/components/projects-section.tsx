@@ -3,7 +3,7 @@
 import { projects } from "@/constants/projects";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import { GitHubIcon, AppleIcon, GooglePlayIcon } from "@/components/icons";
+import { GitHubIcon } from "@/components/icons";
 
 export function ProjectsSection() {
   const containerVariants = {
@@ -118,29 +118,41 @@ export function ProjectsSection() {
                         Visit Live Site
                       </a>
                     )}
-                    {project.appStoreUrl && (
-                      <a
-                        href={project.appStoreUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
-                      >
-                        <AppleIcon className="mr-2 h-4 w-4" />
-                        App Store
-                      </a>
-                    )}
-                    {project.playStoreUrl && (
-                      <a
-                        href={project.playStoreUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
-                      >
-                        <GooglePlayIcon className="mr-2 h-4 w-4" />
-                        Google Play
-                      </a>
-                    )}
                   </div>
+                  {(project.appStoreUrl || project.playStoreUrl) && (
+                    <div className="flex items-center gap-3 mt-3">
+                      {project.appStoreUrl && (
+                        <a
+                          href={project.appStoreUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Download on the App Store"
+                          className="opacity-90 hover:opacity-100 transition-opacity"
+                        >
+                          <img
+                            src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                            alt="Download on the App Store"
+                            className="h-10"
+                          />
+                        </a>
+                      )}
+                      {project.playStoreUrl && (
+                        <a
+                          href={project.playStoreUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Get it on Google Play"
+                          className="opacity-90 hover:opacity-100 transition-opacity"
+                        >
+                          <img
+                            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                            alt="Get it on Google Play"
+                            className="-my-[10px] h-[60px]"
+                          />
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
